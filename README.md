@@ -89,15 +89,14 @@ Proje statik web dosyalarından (HTML/CSS) oluşmaktadır. Çalıştırmak için
 
 ---
 
-## 🤝 Katkıda Bulunma (Contributing)
+## 🤝 Katkıda Bulunanlar ve Görev Dağılımı 
 
-Bu proje açık kaynaklı bir iyilik hareketidir. Projeyi geliştirmek, yeni özellikler eklemek veya hataları düzeltmek için katkılarınızı bekliyoruz!
+Bu proje YetGen mezuniyet projemizdir. Proje kapsamında ekimizdeki çalışma arkadaşlarımızın görev dağılımı ve sorumlulukları aşağıda belirtilmiştir.
 
-1. Bu depoyu (repository) Fork'layın.
-2. Yeni bir özellik dalı (branch) oluşturun: `git checkout -b ozellik/yeni-fikir`
-3. Değişikliklerinizi yapın ve kaydedin (commit): `git commit -m 'Harika bir yeni özellik eklendi'`
-4. Dalınıza gönderin (push): `git push origin ozellik/yeni-fikir`
-5. Bir Çekme İsteği (Pull Request) başlatın.
+*   **Berke Mert ÖZTÜRK:** Web sitesi ve mobil uygulama  geliştirme.
+*   **Ayşegül ORAL:** Sunum içeriği hazırlığı.
+*   **Ela Doğa GÖKMEN:** Sunum içeriği hazırlığı.
+*   **Sude BİLİR:** Sunum konuşma metninin kurgusu ve final sunumu.
 
 ---
 
@@ -105,3 +104,6 @@ Bu proje açık kaynaklı bir iyilik hareketidir. Projeyi geliştirmek, yeni öz
   <p>Gıdanın çöpe değil, sofraya ulaştığı sürdürülebilir bir gelecek için.</p>
   <p><b>Gıda Köprüsü © 2026</b></p>
 </div>
+
+---
+*Geliştirici: Berke Mert Öztürk*
