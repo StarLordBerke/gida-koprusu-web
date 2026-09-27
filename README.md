@@ -6,6 +6,13 @@
 
 Birleşmiş Milletler Sürdürülebilir Kalkınma Amaçları'ndan **SKA 2: Açlığa Son** ve **SKA 12: Sorumlu Tüketim ve Üretim** hedeflerini doğrudan destekler.
 
+## 🌐 Canlı Web Sitesi & Demo Bağlantıları
+
+Platformu tarayıcınız üzerinden canlı olarak deneyimleyebilir, interaktif haritayı inceleyebilir ve yapay zeka destekli ihbar sistemini test edebilirsiniz:
+
+- 🚀 **Canlı Uygulama (Canlıya Alınmış Hali):** [https://yet-gen2.vercel.app/](https://yet-gen2.vercel.app/)
+
+
 ---
 
 ## 🚀 Proje Hakkında
