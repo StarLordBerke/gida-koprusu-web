@@ -16,11 +16,7 @@ Platformu tarayıcınız üzerinden canlı olarak deneyimleyebilir, interaktif h
 
 Gıda Köprüsü platformunun tüm arayüzleri, renk psikolojisi ve görsel hiyerarşi kurallarına uygun olarak masaüstü, tablet ve mobil cihazlar için özel olarak geliştirilmiştir.
 
-<a href=""><img align="center" src="https://github.com/StarLordBerke4/MaviAg/blob/main/img/anasayfa.png" alt="anasayfa" width="1200"/></a>
-
-<a href=""><img align="center" src="https://github.com/StarLordBerke4/MaviAg/blob/main/img/anasayfa.png" alt="anasayfa" width="1200"/></a>
-
-<a href=""><img align="center" src="https://github.com/StarLordBerke4/MaviAg/blob/main/img/anasayfa.png" alt="anasayfa" width="1200"/></a>
+<a href=""><img align="center" src="https://github.com/StarLordBerke4/gida-koprusu-web/blob/main/img/G%C4%B1da%20K%C3%B6pr%C3%BCs%C3%BC.png" alt="anasayfa" width="1200"/></a>
 
 ---
 
