@@ -1,0 +1,552 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>İletişim - Gıda Köprüsü</title>
+  <meta name="description" content="Gıda Köprüsü ile iletişime geçin. Soru, öneri, işletme ortaklığı ve gönüllülük talepleriniz için bize ulaşın.">
+
+  <!-- Google Fonts: Urbanist -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: '#DDA63A',
+          },
+          fontFamily: {
+            sans: ['Urbanist', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background-color: #374151;
+      border-radius: 9999px;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-white antialiased font-sans selection:bg-brand selection:text-gray-900 min-h-screen flex flex-col">
+
+  <!-- Navbar -->
+  <nav class="container mx-auto px-6 py-5 flex justify-between items-center sticky top-0 bg-gray-900/90 backdrop-blur-md z-50 border-b border-gray-800">
+    <a href="index.html" class="text-2xl font-bold tracking-wide flex items-center gap-2 group">
+      <span>Gıda<span class="text-brand">Köprüsü</span></span>
+    </a>
+
+    <!-- Mobile Menu Button -->
+    <div class="md:hidden">
+      <button id="mobileMenuBtn" class="text-white hover:text-brand focus:outline-none p-2" aria-label="Menüyü Aç">
+        <i class="fa-solid fa-bars text-2xl"></i>
+      </button>
+    </div>
+
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex space-x-8 items-center">
+      <a href="index.html" class="text-gray-300 hover:text-brand font-medium transition">Ana Sayfa</a>
+      <a href="index.html#misyon" class="text-gray-300 hover:text-brand font-medium transition">Misyonumuz</a>
+      <a href="index.html#nasil-calisir" class="text-gray-300 hover:text-brand font-medium transition">Nasıl Çalışır?</a>
+      <a href="iletisim.html" class="text-brand font-bold transition flex items-center gap-1.5">
+        <span class="w-1.5 h-1.5 rounded-full bg-brand"></span>
+        İletişim
+      </a>
+      <a href="https://yet-gen.vercel.app/" target="_blank" rel="noopener noreferrer" class="inline-flex justify-center items-center bg-brand text-gray-900 px-6 py-2.5 rounded-full font-bold hover:bg-yellow-500 transition shadow-lg shadow-brand/20">
+        Uygulamayı İndir
+      </a>
+    </div>
+  </nav>
+
+  <!-- Mobile Dropdown Menu -->
+  <div id="mobileMenu" class="hidden md:hidden bg-gray-950/95 border-b border-gray-800 px-6 py-5 flex flex-col space-y-4">
+    <a href="index.html" class="text-gray-300 hover:text-brand font-medium py-1">Ana Sayfa</a>
+    <a href="index.html#misyon" class="text-gray-300 hover:text-brand font-medium py-1">Misyonumuz</a>
+    <a href="index.html#nasil-calisir" class="text-gray-300 hover:text-brand font-medium py-1">Nasıl Çalışır?</a>
+    <a href="iletisim.html" class="text-brand font-bold py-1 flex items-center gap-2">
+      <i class="fa-solid fa-circle text-[8px]"></i> İletişim
+    </a>
+    <a href="https://yet-gen.vercel.app/" target="_blank" rel="noopener noreferrer" class="inline-flex justify-center items-center bg-brand text-gray-900 px-6 py-3 rounded-full font-bold text-center">
+      Uygulamayı İndir
+    </a>
+  </div>
+
+  <!-- Header / Hero Section -->
+  <section class="relative overflow-hidden py-16 md:py-24 border-b border-gray-800/80 bg-gradient-to-b from-gray-950 via-gray-900 to-gray-900">
+    <div class="absolute inset-0 opacity-10 pointer-events-none">
+      <div class="absolute -top-32 -left-32 w-96 h-96 bg-brand rounded-full blur-3xl"></div>
+      <div class="absolute top-1/2 -right-32 w-96 h-96 bg-brand rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="container mx-auto px-6 relative z-10 text-center max-w-3xl">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand/10 border border-brand/30 text-brand text-xs md:text-sm font-semibold mb-6">
+        <i class="fa-solid fa-headset"></i> Bize Ulaşın
+      </div>
+      <h1 class="text-4xl md:text-6xl font-black text-white tracking-tight mb-6">
+        İletişim & <span class="text-brand">Dayanışma</span> Ağı
+      </h1>
+      <p class="text-lg md:text-xl text-gray-400 font-normal leading-relaxed">
+        Gıda israfına son verme hareketine sen de dahil ol. Görüş, öneri, işletme ortaklığı, gönüllülük veya destek taleplerin için bize her an ulaşabilirsin.
+      </p>
+    </div>
+  </section>
+
+  <!-- Quick Info Cards -->
+  <section class="container mx-auto px-6 -mt-8 relative z-20">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      
+      <!-- Card 1: Telefon -->
+      <a href="tel:08508884432" class="group bg-gray-800/90 hover:bg-gray-800 border border-gray-700/80 hover:border-brand/60 rounded-2xl p-6 transition duration-300 shadow-xl backdrop-blur-sm flex flex-col">
+        <div class="w-12 h-12 rounded-xl bg-brand/10 text-brand flex items-center justify-center text-xl mb-4 group-hover:scale-110 group-hover:bg-brand group-hover:text-gray-900 transition">
+          <i class="fa-solid fa-phone"></i>
+        </div>
+        <span class="text-xs uppercase tracking-wider text-brand font-bold mb-1">Müşteri & Destek Hattı</span>
+        <h2 class="text-lg font-bold text-white mb-2 group-hover:text-brand transition">0850 888 44 32</h2>
+        <p class="text-sm text-gray-400 mt-auto">+90 (212) 555 01 23<br><span class="text-xs text-gray-500">Hafta içi 09:00 - 18:00</span></p>
+      </a>
+
+      <!-- Card 2: E-Posta -->
+      <a href="mailto:iletisim@gidakoprusu.org" class="group bg-gray-800/90 hover:bg-gray-800 border border-gray-700/80 hover:border-brand/60 rounded-2xl p-6 transition duration-300 shadow-xl backdrop-blur-sm flex flex-col">
+        <div class="w-12 h-12 rounded-xl bg-brand/10 text-brand flex items-center justify-center text-xl mb-4 group-hover:scale-110 group-hover:bg-brand group-hover:text-gray-900 transition">
+          <i class="fa-solid fa-envelope"></i>
+        </div>
+        <span class="text-xs uppercase tracking-wider text-brand font-bold mb-1">E-Posta Adresi</span>
+        <h2 class="text-lg font-bold text-white mb-2 group-hover:text-brand transition">iletisim@gidakoprusu.org</h2>
+        <p class="text-sm text-gray-400 mt-auto">ortaklik@gidakoprusu.org<br><span class="text-xs text-gray-500">Ortalama 2 saatte yanıt</span></p>
+      </a>
+
+      <!-- Card 3: Ofis / Konum -->
+      <div class="bg-gray-800/90 border border-gray-700/80 hover:border-brand/60 rounded-2xl p-6 transition duration-300 shadow-xl backdrop-blur-sm flex flex-col">
+        <div class="w-12 h-12 rounded-xl bg-brand/10 text-brand flex items-center justify-center text-xl mb-4">
+          <i class="fa-solid fa-location-dot"></i>
+        </div>
+        <span class="text-xs uppercase tracking-wider text-brand font-bold mb-1">Genel Merkez & Hub</span>
+        <h2 class="text-lg font-bold text-white mb-2">YetGen & Gıda Köprüsü</h2>
+        <p class="text-sm text-gray-400 mt-auto">Büyükdere Cad. No: 128, Levent, Beşiktaş / İstanbul</p>
+      </div>
+
+      <!-- Card 4: Çalışma Saatleri & Nöbet -->
+      <div class="bg-gray-800/90 border border-gray-700/80 hover:border-brand/60 rounded-2xl p-6 transition duration-300 shadow-xl backdrop-blur-sm flex flex-col">
+        <div class="w-12 h-12 rounded-xl bg-brand/10 text-brand flex items-center justify-center text-xl mb-4">
+          <i class="fa-solid fa-clock"></i>
+        </div>
+        <span class="text-xs uppercase tracking-wider text-brand font-bold mb-1">Operasyon Saatleri</span>
+        <h2 class="text-lg font-bold text-white mb-2">Pzt - Cuma: 09:00 - 18:00</h2>
+        <p class="text-sm text-gray-400 mt-auto"><span class="inline-block w-2 h-2 rounded-full bg-emerald-400 mr-1.5 animate-pulse"></span>Acil Gıda Kurtarma: 7/24 Aktif</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Main Content: Form & Live Channels -->
+  <main class="container mx-auto px-6 py-16 md:py-24">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+      
+      <!-- Contact Form (7 Cols) -->
+      <div class="lg:col-span-7 bg-gray-800 rounded-3xl p-8 md:p-10 border border-gray-700 shadow-2xl relative">
+        <div class="mb-8">
+          <div class="inline-flex items-center gap-2 text-brand text-sm font-bold uppercase tracking-wider mb-2">
+            <i class="fa-solid fa-paper-plane"></i> Mesaj Gönderin
+          </div>
+          <h2 class="text-3xl font-extrabold text-white">Bizimle İletişime Geçin</h2>
+          <p class="text-gray-400 text-sm mt-2">Aşağıdaki formu doldurarak bize iletebilirsiniz. Ekibimiz en kısa sürede sizinle bağlantı kuracaktır.</p>
+        </div>
+
+        <form id="contactForm" class="space-y-6">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div class="space-y-2">
+              <label for="fullName" class="block text-sm font-semibold text-gray-300">Adınız ve Soyadınız <span class="text-brand">*</span></label>
+              <div class="relative">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-3.5 text-gray-500 pointer-events-none">
+                  <i class="fa-regular fa-user"></i>
+                </span>
+                <input type="text" id="fullName" required placeholder="Ahmet Yılmaz" class="w-full bg-gray-900 border border-gray-700 rounded-xl pl-10 pr-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-brand focus:ring-1 focus:ring-brand transition">
+              </div>
+            </div>
+
+            <div class="space-y-2">
+              <label for="email" class="block text-sm font-semibold text-gray-300">E-Posta Adresiniz <span class="text-brand">*</span></label>
+              <div class="relative">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-3.5 text-gray-500 pointer-events-none">
+                  <i class="fa-regular fa-envelope"></i>
+                </span>
+                <input type="email" id="email" required placeholder="ahmet@ornek.com" class="w-full bg-gray-900 border border-gray-700 rounded-xl pl-10 pr-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-brand focus:ring-1 focus:ring-brand transition">
+              </div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div class="space-y-2">
+              <label for="phone" class="block text-sm font-semibold text-gray-300">Telefon Numaranız</label>
+              <div class="relative">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-3.5 text-gray-500 pointer-events-none">
+                  <i class="fa-solid fa-phone-flip text-xs"></i>
+                </span>
+                <input type="tel" id="phone" placeholder="05XX XXX XX XX" class="w-full bg-gray-900 border border-gray-700 rounded-xl pl-10 pr-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-brand focus:ring-1 focus:ring-brand transition">
+              </div>
+            </div>
+
+            <div class="space-y-2">
+              <label for="subject" class="block text-sm font-semibold text-gray-300">Konu / Kategori <span class="text-brand">*</span></label>
+              <div class="relative">
+                <select id="subject" required class="w-full bg-gray-900 border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand focus:ring-1 focus:ring-brand transition appearance-none">
+                  <option value="" disabled selected>Konu seçiniz</option>
+                  <option value="genel">Genel Bilgi & Sorular</option>
+                  <option value="isletme">İşletme Katılımı & Fazla Gıda Paylaşımı</option>
+                  <option value="bagis">İhtiyaç Sahibi Başvurusu / Bilgi</option>
+                  <option value="kurye">Gönüllü Kurye / Teslimat Desteği</option>
+                  <option value="sponsorluk">Kurumsal Sponsorluk & Ortaklık</option>
+                  <option value="teknik">Uygulama & Teknik Destek</option>
+                  <option value="diger">Diğer</option>
+                </select>
+                <span class="absolute inset-y-0 right-0 flex items-center pr-3.5 text-gray-500 pointer-events-none">
+                  <i class="fa-solid fa-chevron-down text-xs"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="space-y-2">
+            <label for="message" class="block text-sm font-semibold text-gray-300">Mesajınız <span class="text-brand">*</span></label>
+            <textarea id="message" rows="5" required placeholder="Bize iletmek istediğiniz detayları buraya yazabilirsiniz..." class="w-full bg-gray-900 border border-gray-700 rounded-xl p-4 text-white placeholder-gray-500 focus:outline-none focus:border-brand focus:ring-1 focus:ring-brand transition"></textarea>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <input type="checkbox" id="kvkk" required class="mt-1 w-4 h-4 bg-gray-900 border-gray-700 rounded text-brand focus:ring-brand">
+            <label for="kvkk" class="text-gray-400 text-xs leading-relaxed">
+              Kişisel verilerimin <span class="text-brand hover:underline cursor-pointer">KVKK Aydınlatma Metni</span> kapsamında işlenmesini ve benimle iletişime geçilmesini onaylıyorum.
+            </label>
+          </div>
+
+          <button type="submit" id="submitBtn" class="w-full bg-brand text-gray-900 py-4 px-6 rounded-xl font-bold text-lg hover:bg-yellow-500 transition shadow-lg shadow-brand/20 flex items-center justify-center gap-3">
+            <i class="fa-solid fa-paper-plane"></i>
+            <span>Mesajı Gönder</span>
+          </button>
+        </form>
+
+        <!-- Success Feedback Modal / Alert (Hidden by default) -->
+        <div id="formSuccessAlert" class="hidden absolute inset-0 bg-gray-900/95 backdrop-blur-md rounded-3xl p-8 flex flex-col items-center justify-center text-center z-30 transition">
+          <div class="w-20 h-20 bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 rounded-full flex items-center justify-center text-3xl mb-6 animate-bounce">
+            <i class="fa-solid fa-check"></i>
+          </div>
+          <h3 class="text-2xl font-extrabold text-white mb-2">Mesajınız Başarıyla İletildi!</h3>
+          <p class="text-gray-400 max-w-md mb-6 text-sm leading-relaxed">
+            Değerli geri bildiriminiz için teşekkür ederiz. İlgili birimimiz mesajınızı inceleyip en geç 24 saat içinde tarafınıza dönüş sağlayacaktır.
+          </p>
+          <button type="button" id="resetFormBtn" class="bg-gray-800 hover:bg-gray-700 text-white border border-gray-600 px-6 py-2.5 rounded-full font-semibold text-sm transition">
+            Yeni Bir Mesaj Gönder
+          </button>
+        </div>
+      </div>
+
+      <!-- Right Column: Direct Channels, FAQ & WhatsApp (5 Cols) -->
+      <div class="lg:col-span-5 space-y-8">
+        
+        <!-- Fast WhatsApp Box -->
+        <div class="bg-gradient-to-br from-emerald-950/60 to-gray-800 border border-emerald-600/30 rounded-3xl p-8 shadow-xl relative overflow-hidden">
+          <div class="absolute -right-6 -bottom-6 text-emerald-500/10 text-9xl pointer-events-none">
+            <i class="fa-brands fa-whatsapp"></i>
+          </div>
+          <div class="flex items-center gap-3 text-emerald-400 font-bold text-sm uppercase tracking-wider mb-2">
+            <i class="fa-brands fa-whatsapp text-lg"></i> Hızlı WhatsApp Hattı
+          </div>
+          <h3 class="text-2xl font-bold text-white mb-3">Anında Canlı Destek</h3>
+          <p class="text-gray-300 text-sm leading-relaxed mb-6">
+            Acil fazla gıda bildirimi veya anlık sorularınız için WhatsApp destek ekibimizle doğrudan yazışabilirsiniz.
+          </p>
+          <a href="https://wa.me/905550000000?text=Merhaba,%20G%C4%B1da%20K%C3%B6pr%C3%BCs%C3%BC%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 bg-emerald-500 hover:bg-emerald-600 text-gray-950 font-bold px-6 py-3 rounded-full text-sm transition shadow-lg shadow-emerald-500/20">
+            <i class="fa-brands fa-whatsapp text-lg"></i>
+            WhatsApp ile Başlat
+          </a>
+        </div>
+
+        <!-- Quick Access to Portals -->
+        <div class="bg-gray-800/80 border border-gray-700 rounded-3xl p-8 shadow-xl">
+          <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2.5">
+            <i class="fa-solid fa-arrows-split-up-and-left text-brand"></i>
+            Özel Başvuru Portalları
+          </h3>
+          <p class="text-gray-400 text-sm mb-6">
+            Özel talepleriniz için doğrudan ilgili kayıt sayfalarını kullanabilirsiniz:
+          </p>
+          <div class="space-y-3">
+            <a href="isletme.html" class="flex items-center justify-between p-4 rounded-xl bg-gray-900/60 hover:bg-gray-900 border border-gray-700/60 hover:border-brand/50 transition group">
+              <div class="flex items-center gap-3.5">
+                <div class="w-10 h-10 rounded-lg bg-brand/10 text-brand flex items-center justify-center text-base group-hover:bg-brand group-hover:text-gray-900 transition">
+                  <i class="fa-solid fa-briefcase"></i>
+                </div>
+                <div>
+                  <h4 class="text-sm font-bold text-white group-hover:text-brand transition">İşletme Olarak Katıl</h4>
+                  <p class="text-xs text-gray-400">Restoran, market & fırınlar için</p>
+                </div>
+              </div>
+              <i class="fa-solid fa-arrow-right text-gray-500 group-hover:text-brand group-hover:translate-x-1 transition text-sm"></i>
+            </a>
+
+            <a href="ihtiyac-sahibi.html" class="flex items-center justify-between p-4 rounded-xl bg-gray-900/60 hover:bg-gray-900 border border-gray-700/60 hover:border-brand/50 transition group">
+              <div class="flex items-center gap-3.5">
+                <div class="w-10 h-10 rounded-lg bg-brand/10 text-brand flex items-center justify-center text-base group-hover:bg-brand group-hover:text-gray-900 transition">
+                  <i class="fa-solid fa-hand-holding-heart"></i>
+                </div>
+                <div>
+                  <h4 class="text-sm font-bold text-white group-hover:text-brand transition">İhtiyaç Sahibi Başvurusu</h4>
+                  <p class="text-xs text-gray-400">Ücretsiz kurtarılmış gıda desteği</p>
+                </div>
+              </div>
+              <i class="fa-solid fa-arrow-right text-gray-500 group-hover:text-brand group-hover:translate-x-1 transition text-sm"></i>
+            </a>
+
+            <a href="kurumsal-ortak.html" class="flex items-center justify-between p-4 rounded-xl bg-gray-900/60 hover:bg-gray-900 border border-gray-700/60 hover:border-brand/50 transition group">
+              <div class="flex items-center gap-3.5">
+                <div class="w-10 h-10 rounded-lg bg-brand/10 text-brand flex items-center justify-center text-base group-hover:bg-brand group-hover:text-gray-900 transition">
+                  <i class="fa-solid fa-handshake"></i>
+                </div>
+                <div>
+                  <h4 class="text-sm font-bold text-white group-hover:text-brand transition">Kurumsal Ortaklık</h4>
+                  <p class="text-xs text-gray-400">Sponsorluk & teknoloji entegrasyonu</p>
+                </div>
+              </div>
+              <i class="fa-solid fa-arrow-right text-gray-500 group-hover:text-brand group-hover:translate-x-1 transition text-sm"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Social Channels -->
+        <div class="bg-gray-800/80 border border-gray-700 rounded-3xl p-8 shadow-xl">
+          <h3 class="text-lg font-bold text-white mb-2">Bizi Sosyal Medyada Takip Edin</h3>
+          <p class="text-gray-400 text-xs mb-5">En son kurtarma istatistikleri ve hikayelerimizden haberdar olun.</p>
+          <div class="grid grid-cols-4 gap-3">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center justify-center p-3 rounded-xl bg-gray-900 border border-gray-700 hover:border-brand hover:text-brand transition text-gray-400 group">
+              <i class="fa-brands fa-instagram text-xl mb-1 group-hover:scale-110 transition"></i>
+              <span class="text-[10px] font-semibold">Instagram</span>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center justify-center p-3 rounded-xl bg-gray-900 border border-gray-700 hover:border-brand hover:text-brand transition text-gray-400 group">
+              <i class="fa-brands fa-twitter text-xl mb-1 group-hover:scale-110 transition"></i>
+              <span class="text-[10px] font-semibold">Twitter</span>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center justify-center p-3 rounded-xl bg-gray-900 border border-gray-700 hover:border-brand hover:text-brand transition text-gray-400 group">
+              <i class="fa-brands fa-linkedin text-xl mb-1 group-hover:scale-110 transition"></i>
+              <span class="text-[10px] font-semibold">LinkedIn</span>
+            </a>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center justify-center p-3 rounded-xl bg-gray-900 border border-gray-700 hover:border-brand hover:text-brand transition text-gray-400 group">
+              <i class="fa-brands fa-github text-xl mb-1 group-hover:scale-110 transition"></i>
+              <span class="text-[10px] font-semibold">GitHub</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FAQ Section (Sıkça Sorulan Sorular) -->
+  <section class="border-t border-gray-800 bg-gray-950/60 py-20">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <div class="text-center mb-12">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand/10 border border-brand/20 text-brand text-xs font-semibold mb-3">
+          <i class="fa-solid fa-circle-question"></i> Merak Edilenler
+        </div>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-3">Sıkça Sorulan Sorular</h2>
+        <p class="text-gray-400 text-sm md:text-base">İletişim öncesinde aklınıza gelebilecek yaygın soruları derledik.</p>
+      </div>
+
+      <div class="space-y-4" id="faqAccordion">
+        
+        <!-- FAQ 1 -->
+        <div class="border border-gray-800 rounded-2xl bg-gray-900/80 overflow-hidden transition">
+          <button type="button" class="faq-toggle w-full p-6 text-left flex justify-between items-center focus:outline-none hover:text-brand transition">
+            <span class="font-bold text-white text-base md:text-lg">İşletmemiz için sisteme katılmak ücretli mi?</span>
+            <i class="fa-solid fa-chevron-down text-brand transition-transform duration-300"></i>
+          </button>
+          <div class="faq-content hidden px-6 pb-6 text-gray-400 text-sm leading-relaxed border-t border-gray-800/50 pt-4">
+            Hayır, işletmeler için sisteme temel üyelik ve kayıt tamamen ücretsizdir. Sistemde satılan indirimli fırsat ürünlerinden yalnızca küçük bir operasyonel katkı payı kesilirken, doğrudan bağışlanan ürünlerde hiçbir kesinti yapılmaz ve yasal vergi muafiyeti belgesi düzenlenir.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="border border-gray-800 rounded-2xl bg-gray-900/80 overflow-hidden transition">
+          <button type="button" class="faq-toggle w-full p-6 text-left flex justify-between items-center focus:outline-none hover:text-brand transition">
+            <span class="font-bold text-white text-base md:text-lg">Gönüllü kurye olarak nasıl destek olabilirim?</span>
+            <i class="fa-solid fa-chevron-down text-brand transition-transform duration-300"></i>
+          </button>
+          <div class="faq-content hidden px-6 pb-6 text-gray-400 text-sm leading-relaxed border-t border-gray-800/50 pt-4">
+            Mobil uygulamamızı indirerek veya iletişim formumuz üzerinden "Gönüllü Kurye" başlığını seçerek başvurabilirsiniz. Mahallenizdeki yürüyerek teslimat noktalarından bağış paketlerini teslim alıp yakın mesafedeki ihtiyaç sahiplerine ulaştırarak hem toplumsal fayda sağlayabilir hem de özel indirim kuponları kazanabilirsiniz.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="border border-gray-800 rounded-2xl bg-gray-900/80 overflow-hidden transition">
+          <button type="button" class="faq-toggle w-full p-6 text-left flex justify-between items-center focus:outline-none hover:text-brand transition">
+            <span class="font-bold text-white text-base md:text-lg">Gönderdiğim mesaja ne kadar sürede yanıt alırım?</span>
+            <i class="fa-solid fa-chevron-down text-brand transition-transform duration-300"></i>
+          </button>
+          <div class="faq-content hidden px-6 pb-6 text-gray-400 text-sm leading-relaxed border-t border-gray-800/50 pt-4">
+            İletişim formundan gönderilen başvurular ve mesajlar ortalama 2 ile 4 saat arasında incelenir. En geç 24 saat içerisinde e-posta veya telefon ile tarafınıza geri bildirim sağlanmaktadır. Acil durumlar için WhatsApp hattımızı kullanabilirsiniz.
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="border border-gray-800 rounded-2xl bg-gray-900/80 overflow-hidden transition">
+          <button type="button" class="faq-toggle w-full p-6 text-left flex justify-between items-center focus:outline-none hover:text-brand transition">
+            <span class="font-bold text-white text-base md:text-lg">Kurumsal sponsorluk ve teknoloji entegrasyonu nasıl işler?</span>
+            <i class="fa-solid fa-chevron-down text-brand transition-transform duration-300"></i>
+          </button>
+          <div class="faq-content hidden px-6 pb-6 text-gray-400 text-sm leading-relaxed border-t border-gray-800/50 pt-4">
+            Kurumsal Ortaklık sayfamızdaki sözleşme protokolünü inceleyebilir veya ortaklik@gidakoprusu.org adresinden kurumsal ilişkiler direktörlüğümüzle doğrudan toplantı planlayabilirsiniz.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Location & Map Section -->
+  <section class="container mx-auto px-6 py-16">
+    <div class="bg-gray-800/70 border border-gray-700 rounded-3xl p-8 md:p-12 overflow-hidden shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8">
+      <div class="max-w-xl">
+        <div class="inline-flex items-center gap-2 text-brand text-xs font-bold uppercase tracking-wider mb-2">
+          <i class="fa-solid fa-map-location-dot"></i> Merkez Ofis & Ziyaret
+        </div>
+        <h3 class="text-2xl md:text-3xl font-extrabold text-white mb-3">Levent İnovasyon Merkezi</h3>
+        <p class="text-gray-400 text-sm leading-relaxed mb-6">
+          Merkez ofisimizde her Perşembe sürdürülebilirlik atölyeleri ve açık ofis günleri düzenlenmektedir. Bizleri ziyaret etmek veya iş birliği kahvesi içmek için randevu alabilirsiniz.
+        </p>
+        <div class="flex flex-wrap items-center gap-4">
+          <a href="https://maps.google.com/?q=Levent+Istanbul" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-brand text-gray-900 font-bold px-6 py-3 rounded-full text-sm hover:bg-yellow-500 transition shadow-lg shadow-brand/20">
+            <i class="fa-solid fa-diamond-turn-right"></i> Haritada Yol Tarifi Al
+          </a>
+          <span class="text-gray-400 text-xs flex items-center gap-2">
+            <i class="fa-solid fa-train-subway text-brand"></i> M2 Levent Metrosu'na 3 dk yürüme mesafesinde
+          </span>
+        </div>
+      </div>
+
+      <div class="w-full md:w-80 h-48 md:h-56 bg-gray-900 border border-gray-700 rounded-2xl overflow-hidden relative group shadow-inner">
+        <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?q=80&w=800&auto=format&fit=crop" alt="İstanbul Harita ve Konum" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-60">
+        <div class="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/40 to-transparent flex flex-col justify-end p-4">
+          <div class="flex items-center gap-2 text-brand font-bold text-sm">
+            <i class="fa-solid fa-location-pin animate-bounce"></i> Levent, İstanbul
+          </div>
+          <span class="text-xs text-gray-300">Gıda Köprüsü Operasyon Merkezi</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-950 pt-16 pb-8 border-t border-gray-800 mt-auto">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 mb-12">
+        <div class="text-left">
+          <a href="index.html" class="text-3xl font-bold text-white tracking-wide mb-3 block">
+            Gıda<span class="text-brand">Köprüsü</span>
+          </a>
+          <p class="text-gray-400 text-sm max-w-sm">
+            Gıdanın çöpe değil, sofraya ulaştığı sürdürülebilir bir gelecek için teknoloji ve dayanışmayı birleştiriyoruz.
+          </p>
+        </div>
+        
+        <div class="flex flex-col md:items-end text-left md:text-right">
+          <p class="text-gray-400 text-sm max-w-md mb-4 flex items-start md:items-center gap-3">
+            <i class="fa-solid fa-earth-americas text-brand text-xl"></i>
+            <span>
+              Birleşmiş Milletler Sürdürülebilir Kalkınma Amaçları <br/>
+              <span class="text-brand font-bold">(SKA 2: Açlığa Son)</span> hedeflerini destekler.
+            </span>
+          </p>
+          <div class="flex gap-5">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center text-gray-400 hover:text-brand hover:bg-gray-800 transition" aria-label="Instagram">
+              <i class="fa-brands fa-instagram text-lg"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center text-gray-400 hover:text-brand hover:bg-gray-800 transition" aria-label="Twitter">
+              <i class="fa-brands fa-twitter text-lg"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center text-gray-400 hover:text-brand hover:bg-gray-800 transition" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin text-lg"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-900 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-gray-600 text-sm font-medium">© 2026 Gıda Köprüsü. Tüm hakları saklıdır.</p>
+        <div class="flex gap-6 text-sm text-gray-600 font-medium">
+          <a href="index.html" class="hover:text-gray-400 transition">Ana Sayfa</a>
+          <a href="iletisim.html" class="hover:text-brand transition">İletişim</a>
+          <a href="#" class="hover:text-gray-400 transition">Gizlilik Politikası</a>
+          <a href="#" class="hover:text-gray-400 transition">Kullanım Koşulları</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+
+    // FAQ Accordion
+    document.querySelectorAll('.faq-toggle').forEach(button => {
+      button.addEventListener('click', () => {
+        const content = button.nextElementSibling;
+        const icon = button.querySelector('i');
+        const isHidden = content.classList.contains('hidden');
+
+        // Close all other FAQs
+        document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+        document.querySelectorAll('.faq-toggle i').forEach(ic => ic.classList.remove('rotate-180'));
+
+        if (isHidden) {
+          content.classList.remove('hidden');
+          icon.classList.add('rotate-180');
+        }
+      });
+    });
+
+    // Contact Form Submission Handling
+    const contactForm = document.getElementById('contactForm');
+    const formSuccessAlert = document.getElementById('formSuccessAlert');
+    const resetFormBtn = document.getElementById('resetFormBtn');
+
+    if (contactForm && formSuccessAlert) {
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        // Show submission feedback
+        formSuccessAlert.classList.remove('hidden');
+        contactForm.reset();
+      });
+    }
+
+    if (resetFormBtn && formSuccessAlert) {
+      resetFormBtn.addEventListener('click', () => {
+        formSuccessAlert.classList.add('hidden');
+      });
+    }
+  </script>
+</body>
+</html>
