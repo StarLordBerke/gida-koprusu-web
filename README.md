@@ -12,6 +12,15 @@ Platformu tarayıcınız üzerinden canlı olarak deneyimleyebilir, interaktif h
 
 - 🚀 **Canlı Uygulama (Canlıya Alınmış Hali):** [https://yet-gen2.vercel.app/](https://yet-gen2.vercel.app/)
 
+## 📸 Proje Görselleri ve Arayüz Galerisi
+
+Gıda Köprüsü platformunun tüm arayüzleri, renk psikolojisi ve görsel hiyerarşi kurallarına uygun olarak masaüstü, tablet ve mobil cihazlar için özel olarak geliştirilmiştir.
+
+<a href=""><img align="center" src="https://github.com/StarLordBerke4/MaviAg/blob/main/img/anasayfa.png" alt="anasayfa" width="1200"/></a>
+
+<a href=""><img align="center" src="https://github.com/StarLordBerke4/MaviAg/blob/main/img/anasayfa.png" alt="anasayfa" width="1200"/></a>
+
+<a href=""><img align="center" src="https://github.com/StarLordBerke4/MaviAg/blob/main/img/anasayfa.png" alt="anasayfa" width="1200"/></a>
 
 ---
 
